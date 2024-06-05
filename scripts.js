@@ -36,6 +36,5 @@ setInterval(autoSlide, 3000);
 
 // Mostrar la primera diapositiva al cargar la página
 document.addEventListener('DOMContentLoaded', () => {
-    showSlide('momentos', 0);
     showSlide('galeria', 0);
 });
