@@ -239,6 +239,8 @@ h2 {
     cursor: pointer;
 }
 
+
+
 /* Estilos responsivos */
 @media (max-width: 1200px) {
     .slider-container {

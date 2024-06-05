@@ -29,7 +29,6 @@ function prevSlide(sliderId) {
 }
 
 function autoSlide() {
-    nextSlide('momentos');
     nextSlide('galeria');
 }
 
