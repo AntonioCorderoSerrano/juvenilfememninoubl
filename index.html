@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipo Femenino Juvenil - Unión Balompédica Lebrijana</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-left">
+            <img src="fotos/escudo.png" alt="Logo izquierdo del equipo">
+        </div>
+        <div class="logo-right">
+            <img src="fotos/escudo.png" alt="Logo derecho del equipo">
+        </div>
+        <div class="logo-center">
+            <h1 data-translate-key="header_title">Equipo Femenino Juvenil</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio" data-translate-key="menu_inicio">Inicio</a></li>
+                <li><a href="#sobre-nosotros" data-translate-key="menu_sobre_nosotras">Sobre Nosotras</a></li>
+                <li><a href="#equipo" data-translate-key="menu_equipo">Equipo</a></li>
+                <li><a href="#momentos-destacados" data-translate-key="menu_momentos_destacados">Momentos Destacados</a></li>
+                <li><a href="#galeria" data-translate-key="menu_galeria">Galería</a></li>
+                <li><a href="#contacto" data-translate-key="menu_contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="intro-section">
+            <h2 data-translate-key="inicio_title">Bienvenidos al Equipo Femenino Juvenil</h2>
+            <p data-translate-key="inicio_text">Donde el talento joven y la pasión por el fútbol se encuentran.</p>
+        </section>
+
+        <section id="sobre-nosotros">
+            <h2 data-translate-key="sobre_nosotras_title">Sobre Nosotras</h2>
+            <p data-translate-key="sobre_nosotras_text">El equipo femenino juvenil de Unión Balompédica Lebrijana está comprometido con el desarrollo de jóvenes talentos en el fútbol.</p>
+        </section>
+
+        <section id="equipo">
+            <h2 data-translate-key="equipo_title">Nuestro Equipo</h2>
+            <div class="player-grid">
+                <div class="player-card">
+                    <img src="fotos/tige.jpg" alt="Jugador">
+                    <h3>Perico</h3>
+                    <p>Delantero Centro</p>
+                </div>
+                <div class="player-card">
+                    <img src="default-player.jpg" alt="Jugador">
+                    <h3>Nombre Jugadora 2</h3>
+                    <p>Posición</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="momentos-destacados" class="slider">
+            <h2 data-translate-key="sobre_nosotras_title">Momentos Destacados</h2>
+            <div class="slider-container" id="slider-momentos">
+                <div class="slide active">
+                    <img src="fotos/atardecer.jpg" alt="Foto 1">
+                </div>
+                <div class="slide">
+                    <img src="fotos/loro.png" alt="Foto 2">
+                </div>
+            </div>
+            <div class="slider-buttons">
+                <button class="prev" onclick="prevSlide('momentos')">Anterior</button>
+                <button class="next" onclick="nextSlide('momentos')">Siguiente</button>
+            </div>
+        </section>
+        
+        <section id="galeria" class="slider">
+            <h2 data-translate-key="sobre_nosotras_title">Galería</h2>
+            <div class="slider-container" id="slider-galeria">
+                <div class="slide active">
+                    <img src="foto3.jpg" alt="Foto 3">
+                </div>
+                <div class="slide">
+                    <img src="foto4.jpg" alt="Foto 4">
+                </div>
+            </div>
+            <div class="slider-buttons">
+                <button class="prev" onclick="prevSlide('galeria')">Anterior</button>
+                <button class="next" onclick="nextSlide('galeria')">Siguiente</button>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2 data-translate-key="contacto_title">Contacto</h2>
+            <p data-translate-key="contacto_text">¡Nos encantaría saber de ti! Contáctanos para más información.</p>
+            <div class="button-container">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfXN6b5kOvwP-IMVpATnhYBhBpFGz_xjYHBCpy-jSblWh-ASg/viewform" class="btn">Contactar</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p data-translate-key="footer_text">&copy; 2024 Unión Balompédica Lebrijana. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+        window.onload = loadLanguage;
+    </script>
+</body>
+</html>
