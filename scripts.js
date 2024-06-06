@@ -32,7 +32,7 @@ function autoSlide() {
     nextSlide('galeria');
 }
 
-setInterval(autoSlide, 3000);
+setInterval(autoSlide, 1800);
 
 // Mostrar la primera diapositiva al cargar la página
 document.addEventListener('DOMContentLoaded', () => {
