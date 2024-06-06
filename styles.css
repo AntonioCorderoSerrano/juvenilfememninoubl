@@ -243,7 +243,36 @@ h2 {
     padding: 10px;
     margin: 5px;
     cursor: pointer;
+    border: none; /* Sin bordes */
+    border-radius: 5px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
+
+/* Botón de Anterior: degradado de celeste a blanco más centrado */
+.slider-buttons .prev {
+    background: linear-gradient(to right, #5cd1ff 20%, #ffffff 80%);
+}
+
+.slider-buttons .prev:hover {
+    background: linear-gradient(to right, #4bb0e5 20%, #e6e6e6 80%);
+}
+
+/* Botón de Siguiente: degradado de blanco a celeste más centrado */
+.slider-buttons .next {
+    background: linear-gradient(to left, #5cd1ff 20%, #ffffff 80%);
+}
+
+.slider-buttons .next:hover {
+    background: linear-gradient(to left, #4bb0e5 20%, #e6e6e6 80%);
+}
+
+/* Agregar una pequeña animación al presionar */
+.slider-buttons button:active {
+    transform: translateY(2px);
+}
+
 
 .description {
     text-align: center;
