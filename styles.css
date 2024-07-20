@@ -1,3 +1,35 @@
+/* Estilo para la animación de aparición */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.visible {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+header, section, footer {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+header.visible, section.visible, footer.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -127,6 +159,17 @@ section h2 {
     margin: 0.5rem 0;
     font-size: 1.2rem;
     color: #5cd1ff;
+}
+
+.player-card {
+    /* Estilos base de la tarjeta */
+    transition: transform 0.3s ease;
+}
+
+.player-card.animate {
+    /* Estilo adicional para animación */
+    transform: translateY(0);
+    opacity: 1;
 }
 
 form {
@@ -287,6 +330,41 @@ footer p {
     margin-right: 1em;
 }
 
+/* Estilos para la sección de patrocinadores */
+#patrocinadores {
+    text-align: center;
+}
+
+.patrocinador-grid {
+    display: flex;
+    justify-content: space-around; /* Alinear los patrocinadores alrededor */
+    align-items: center;
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en líneas */
+    gap: 0.2rem; /* Ajustar el espacio entre los elementos */
+    text-align: center;
+}
+
+.patrocinador {
+    max-width: 150px; /* Tamaño máimo de cada patrocinador */
+    margin: 0 1px; /* Ajusta el margen izquierdo y derecho */
+}
+
+.patrocinador :last-child {
+    margin-top: 1.5em;
+}
+
+.patrocinador img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.patrocinador img:hover {
+    transform: scale(1.05);
+}
+
 /* Estilos responsivos */
 @media (max-width: 1200px) {
     .slider-container {
@@ -400,5 +478,14 @@ footer p {
         max-width: 700px;
         max-height: 450px;
         margin-bottom: 1em;
+    }
+
+    nav ul {
+        flex-wrap: wrap; /* Permitir que los elementos se envuelvan en múltiples líneas */
+    }
+
+    nav ul li {
+        width: calc(33.33% - 20px); /* Ajustar el ancho para mostrar tres elementos por línea */
+        margin-right: 10px; /* Añadir espacio entre elementos */
     }
 }
